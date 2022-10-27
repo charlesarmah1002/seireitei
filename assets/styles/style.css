@@ -58,7 +58,7 @@ nav {
     text-transform: uppercase;
     font-weight: 700;
     font-family: secular-one;
-    -webkit-text-stroke: #fdfefe 0.01px;
+    -webkit-text-stroke: #fdfefe 0.1px;
     padding: 0 10px;
     border-radius: 10px;
 }
@@ -270,15 +270,64 @@ nav {
     letter-spacing: 1px;
     width: 200px;
     margin: 10px auto 0 auto;
+    transition: box-shadow 0.3s ease-in-out;
 }
 .featured-section .card-section .card:hover .download-btn {
     animation: bounce infinite 1s alternate cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(-10px);
-    }
     50% {
-        transform: translateY(0);
+        transform: translateY(-5px);
     }
+}
+.featured-section .card-section .card .download-btn:hover {
+    box-shadow: 2px 2px 5px #fdfefe;
+    animation: none;
+}
+.trailer1 {
+    position: relative;
+    width: fit-content;
+    margin: 30px auto;
+}
+.youtube-video {
+    width: 853px;
+    height: 480px;
+}
+@media screen and (max-width: 900px){
+    .trailer1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .youtube-video{
+        width: 90%;
+        height: 250px;
+        margin: 30px auto;
+    }
+}
+footer {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: ;
+}
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 50px;
+    border-top: 2px solid #fdfefe;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+}
+footer .container .logo-mini {
+    font-family: secular-one;
+    font-size: 30px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: #fdfefe 0.1px ;
 }
