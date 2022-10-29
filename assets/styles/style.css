@@ -58,7 +58,7 @@ nav {
     text-transform: uppercase;
     font-weight: 700;
     font-family: secular-one;
-    -webkit-text-stroke: #fdfefe 0.1px;
+    -webkit-text-stroke: #fdfefe 0.7px;
     padding: 0 10px;
     border-radius: 10px;
 }
