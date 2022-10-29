@@ -139,19 +139,14 @@ nav {
 .headliner {
     width: 100%;
     margin: 20px auto;
-    height: calc(100vh - 15vh);
 }
 .headliner .content {
-    position: absolute;
-    left: 0;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -70%);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    margin: 50px auto;
 }
 .headliner .content .image {
     width: 60%;
@@ -168,18 +163,18 @@ nav {
     width: 30%;
 }
 .button {
-   margin: 20px auto;
-   text-transform: uppercase;
-   background: #fdfefe;
-   color: #e90d0d;
-   width: fit-content;
-   text-align: right;
-   padding: 10px;
-   font-weight: 600;
-   text-decoration: none;
-   border-right: 0.5px solid #fdfefe;
-   border-bottom: #fdfefe 0.5px solid;
-   transition: all 0.3s ease-in-out;
+    margin: 20px auto;
+    text-transform: uppercase;
+    background: #fdfefe;
+    color: #e90d0d;
+    width: fit-content;
+    text-align: right;
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    border-right: 0.5px solid #fdfefe;
+    border-bottom: #fdfefe 0.5px solid;
+    transition: all 0.3s ease-in-out;
 }
 .button:hover {
     scale: 1.1;
@@ -194,7 +189,7 @@ nav {
         justify-content: center;
     }
     .headliner .content .image {
-        width: 100%;
+        width: 80%;
     }
     .headliner .content .sidebar {
         width: 100%;
@@ -207,19 +202,24 @@ nav {
 }
 .featured-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 1300px;
-    overflow: hdiden;
     margin: auto;
+}
+.featured-section h3 {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 .card-section {
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    height: 400px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
 }
 .card-section::-webkit-scrollbar {
     height: 1vh;
@@ -233,6 +233,10 @@ nav {
     border-radius: 10px;
     width: 50%;
 }
+.featured-section h3 {
+    text-align: center;
+    font-size: 24px;
+}
 .featured-section .card-section .card {
     width: 250px;
     height: 300px;
@@ -242,7 +246,7 @@ nav {
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
-    margin: auto 20px;
+    margin: 20px;
     transition: all 0.4s ease-in-out;
     background: #fdfefe41;
     backdrop-filter: blur(5ps);
@@ -284,14 +288,10 @@ nav {
     box-shadow: 2px 2px 5px #fdfefe;
     animation: none;
 }
-.trailer1 {
-    position: relative;
-    width: fit-content;
-    margin: 30px auto;
-}
 .youtube-video {
     width: 853px;
     height: 480px;
+    margin: 40px auto;
 }
 @media screen and (max-width: 900px){
     .trailer1 {
@@ -313,7 +313,8 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: ;
+    background: #fdfefe21;
+    backdrop-filter: blur(5px);
 }
 footer .container {
     display: flex;
