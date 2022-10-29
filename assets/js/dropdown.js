@@ -2,8 +2,8 @@ let menuButton = document.querySelector('.menu-toggle')
 let menuDrop = document.querySelector('.menu')
 
 menuButton.addEventListener('click', function () {
-    menuButton.classList.add('toggle-active')
-    menuDrop.classList.add('drop-active')
+   menuButton.classList.toggle('toggle-active')
+    menuDrop.classList.toggle('drop-active')
 })
 
 function item() {
