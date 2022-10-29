@@ -46,11 +46,8 @@ nav {
     padding: 0 50px;
 }
 .logo {
-    /* background: url(../../media/akatsuki-background.jpg); */
     background-size: 70%;
     background-position: center;
-    /* -webkit-background-clip: text;
-    -moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-size: 2.5rem;
@@ -60,6 +57,11 @@ nav {
     -webkit-text-stroke: #fdfefe 0.7px;
     padding: 0 10px;
     border-radius: 10px;
+}
+@media screen and (max-width: 900px) and (orientation: portrait) {
+    .logo {
+        font-size: 30px;
+    }
 }
 .menu {
     display: flex;
@@ -97,9 +99,11 @@ nav {
         background: #0d0d0d;
         padding: 30px 0;
         transition: all 0.4s ease-in-out;
+        opacity: 0;
     }
     .drop-active {
         top: 107%;
+        opacity: 1;
     }
     .menu-item{
         margin: 20px auto;
