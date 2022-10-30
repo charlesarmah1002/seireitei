@@ -310,6 +310,14 @@ nav {
         margin: 30px auto;
     }
 }
+.brief {
+    width: 70%; 
+    text-align: center;
+}
+
+
+
+/* footer - note: not done yet and still have a lot of work to handle but the general look is okay */
 footer {
     height: 20vh;
     display: flex;
