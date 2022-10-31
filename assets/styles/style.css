@@ -150,7 +150,7 @@ nav {
 .headliner .content {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     width: 90%;
     margin: 50px auto;
@@ -167,6 +167,18 @@ nav {
     text-align: center;
     font-size: 1.2rem;
     width: 30%;
+    border: 1px solid;
+    padding: 20px;
+}
+.headliner .content .sidebar a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    margin: 5px auto;
+    text-transform: uppercase;
+}
+.headliner .content .sidebar a:hover {
+    scale: 1.05;
+    text-decoration: underline;
 }
 @media screen and (max-width: 900px) {
     .headliner .content {
@@ -181,10 +193,6 @@ nav {
     .headliner .content .sidebar {
         width: 100%;
         margin: 20px auto;
-    }
-    .headliner .content .sidebar p {
-        width: 80%;
-        margin: auto;
     }
 }
 .featured-section {
