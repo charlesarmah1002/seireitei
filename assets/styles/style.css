@@ -37,6 +37,11 @@ nav {
     top: 0;
     z-index: 999;
 }
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    nav {
+        padding: 30px 0;
+    }
+}
 .navigation-container {
     display: flex;
     align-items: center;
@@ -157,31 +162,11 @@ nav {
     width: 100%;
 }
 .headliner .content .sidebar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
     font-size: 1.2rem;
     width: 30%;
-}
-.button {
-    margin: 20px auto;
-    text-transform: uppercase;
-    background: #fdfefe;
-    color: #e90d0d;
-    width: fit-content;
-    text-align: right;
-    padding: 10px;
-    font-weight: 600;
-    text-decoration: none;
-    border-right: 0.5px solid #fdfefe;
-    border-bottom: #fdfefe 0.5px solid;
-    transition: all 0.3s ease-in-out;
-}
-.button:hover {
-    scale: 1.1;
-    box-shadow: 2px 2px 10px #fdfefe,
-                3px 3px 20px #e90d0d;
 }
 @media screen and (max-width: 900px) {
     .headliner .content {
@@ -261,10 +246,15 @@ nav {
     scale: 1.1;
     box-shadow: 0px 0px 30px #fdfefe;
 }
-.featured-section .card-section .card img {
+.featured-section .card-section .card .image {
     width: 200px;
     height: 200px;
     margin: 10px auto;
+    overflow: hidden;
+}
+.featured-section .card-section .card .image img {
+    width: 100%;
+    height: 100%;
 }
 .featured-section .card-section .card .download-btn {
     text-decoration: none;
