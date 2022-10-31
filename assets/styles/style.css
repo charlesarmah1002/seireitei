@@ -29,7 +29,6 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1400px;
     color: #fdfefe;
     border-bottom: #fdfefe81 3px solid;
     background: #00000041;
@@ -224,7 +223,8 @@ nav {
     flex-wrap: wrap;
     margin: auto;
 }
-.card-section::-webkit-scrollbar {
+/* scrollbar still in consideration would have to go back to it in the future */
+/* .card-section::-webkit-scrollbar {
     height: 1vh;
 }
 .card-section::-webkit-scrollbar-thumb {
@@ -235,7 +235,7 @@ nav {
     background: #0d0d0d;
     border-radius: 10px;
     width: 50%;
-}
+} */
 .featured-section h3 {
     text-align: center;
     font-size: 24px;
