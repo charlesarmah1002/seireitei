@@ -3,10 +3,9 @@
     src: url(../fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
 @font-face {
-    font-family: secular-one;
+font-family: secular-one;
     src: url(../fonts/Secular_One/SecularOne-Regular.ttf);
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +13,9 @@
     font-family: quicksand, sans-serif;
     color: #fdfefe;
     scroll-behavior: smooth;
+}
+p {
+    font-size: 1.6rem;
 }
 body {
     background: radial-gradient(at top left, #e90d0d 0%, #121313 100%), url(../../media/akatsuki-background.jpg);
@@ -142,7 +144,12 @@ nav {
         transform: translateY(-9px) rotate(-45deg);
     }
 }
-
+@media screen and (max-width: 900px) and (orientation: landscape){
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 .headliner {
     width: 100%;
     margin: 20px auto;
@@ -173,8 +180,12 @@ nav {
 .headliner .content .sidebar a {
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-    margin: 5px auto;
+    border: 1px solid;
+    margin: 10px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .headliner .content .sidebar a:hover {
     scale: 1.05;
@@ -311,6 +322,8 @@ nav {
 .brief {
     width: 70%; 
     text-align: center;
+    font-size: 1.2rem;
+    margin: 10px auto;
 }
 
 
@@ -341,3 +354,17 @@ footer .container .logo-mini {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: #fdfefe 0.1px ;
 }
+    @media screen and (max-width: 900px) and (orientation: portrait) {
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        footer .container a {
+            display: block;
+            margin: 5px auto;
+            text-align: center;
+        }
+    }
