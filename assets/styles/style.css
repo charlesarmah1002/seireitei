@@ -108,7 +108,7 @@ nav {
         opacity: 0;
     }
     .drop-active {
-        top: 107%;
+        top: 100%;
         opacity: 1;
     }
     .menu-item{
