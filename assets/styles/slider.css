@@ -42,9 +42,15 @@
 	width: 20px;
 	margin: 0 2px;
 	background-color: var(--white);
-	border-radius: 10px;
+	border-radius: 50%;
 	display: inline-block;
 	transition: background-color 0.6s ease, height 0.6s;
+}
+@media screen and (max-width: 450px) {
+	.dot {
+		width: 10px;
+		height: 10px;
+	}
 }
 .slide-control {
 	position: absolute;
