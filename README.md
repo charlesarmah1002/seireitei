@@ -1,1 +1,2 @@
 # akatsuki anime website
+# this is a personal webiste project to test out my own personal prowess and how well I can achieve personal goals. the website is not that long away from completion. just some things that have to be cleared out. still looking to have some content on but still haven't decided on what to have on there yet. but i am all in for all kinds of suggestions. whatever they may be.
