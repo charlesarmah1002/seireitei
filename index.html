@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/slider.css">
     <link rel="shortcut icon" href="media/The-Akatsuki.jpg" type="image/jpg">
     <title>Akatsuki</title>
 </head>
@@ -27,27 +28,38 @@
         </div>
     </nav>
     <main>
-        <div class="headliner">
-            <div class="content">
-                <div class="image">
-                    <!-- going to be a video montage of akatsuki
-                    would have the cloud and the text playing around in there -->
-                    <img src="media/Bleach-TYBW-1024x576.jpg" alt="Bleach-TYBW">
-                </div>
-                <div class="sidebar">
-                    <!-- looking to have links to all the new episodes there instead of having just one with a bio on there -->
-                    <a href="#mha-s06-ep1" class="button">MHA s06 ep01</a>
-                    <a href="#bleach-tybw-ep2" class="button">Bleach-TYBW Ep02</a>
-                    <a href="#spy-x-family-part2-ep1" class="button">spy-x-family part02 ep01</a>
-                    <a href="#mha-s06-ep1" class="button">MHA s06 ep01</a>
-                    <a href="#bleach-tybw-ep2" class="button">Bleach-TYBW Ep02</a>
-                    <a href="#spy-x-family-part2-ep1" class="button">spy-x-family part02 ep01</a>
-                    <a href="#mha-s06-ep1" class="button">MHA s06 ep01</a>
-                    <a href="#bleach-tybw-ep2" class="button">Bleach-TYBW Ep02</a>
-                    <a href="#spy-x-family-part2-ep1" class="button">spy-x-family part02 ep01</a>
-                </div>
-            </div>
+      <!-- copied slideshow -->
+      <div id="slideshow-container" class="slideshow-container">
+        <div class="slide-item bgimg fade" style="background-image: url('media/boku-no\ hero\ academia.jfif');">
+          <div class="caption">
+            <h2>MHA</h2>
+            <a href="#mha" class="download-btn">Download</a>
+          </div>
         </div>
+        <div class="slide-item bgimg fade" style="background-image: url('media/Bleach-TYBW-1024x576.jpg');">
+          <div class="caption">
+            <h2>Bleach-TYBW</h2>
+            <a href="#bleach" class="download-btn">Download</a>
+          </div>
+        </div>
+      
+        <div class="slide-item bgimg fade" style="background-image: url('media/spy-x-family.jfif.png');">
+          <div class="caption">
+            <h2>Spy-X-Family</h2>
+            <a href="#spy-x-family" class="download-btn">Download</a>
+          </div>
+        </div>
+      
+        <div id="slide-control" class="slide-control">
+          <span class="dot" onclick="chooseSlide(0)"></span>
+          <span class="dot" onclick="chooseSlide(1)"></span>
+          <span class="dot" onclick="chooseSlide(2)"></span>
+        </div>
+      </div>
+      
+      <script src="slider.js"></script>
+
+
         <div class="featured-section">
             <!-- my hero academia -->
             <h3 id="mha">My Hero Academia Season 6</h3>
@@ -107,5 +119,6 @@
 
 
     <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/slider.js"></script>
 </body>
 </html>

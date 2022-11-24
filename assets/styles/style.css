@@ -155,7 +155,7 @@ nav {
     }
 }
 .headliner {
-    width: 100%;
+    width: 70%;
     margin: 20px auto;
 }
 .headliner .content {
@@ -279,7 +279,7 @@ nav {
     width: 100%;
     height: 100%;
 }
-.featured-section .card-section .card .download-btn {
+.download-btn {
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
@@ -372,3 +372,164 @@ footer .container .logo-mini {
             text-align: center;
         }
     }
+
+
+
+    /* slider code */
+    .slideshow-container {
+        position: relative;
+        height: 100%;
+    }
+    
+    .slide-item {
+        display: none;
+    }
+    
+    .bgimg {
+        height: 100%;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .bgimg::after {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.4);
+    }
+    
+    .caption {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 9;
+    }
+    
+    .caption h2 {
+        color: var(--white);
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-size: 70px;
+    }
+    
+    .caption p {
+        color: var(--white);
+        font-size: 20px;
+    }
+    
+    .caption button {
+        background-color: var(--white);
+        border: 2px solid var(--red);
+        color: var(--red);
+        padding: 10px 40px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 16px;
+        margin-top: 30px;
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    
+    .caption button:hover {
+        cursor: pointer;
+        color: var(--white);
+        background-color: var(--red);
+    }
+    
+    .caption button:focus {
+        outline: none;
+    }
+    
+    .dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 0 2px;
+        background-color: var(--white);
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color 0.6s ease, height 0.6s;
+    }
+    
+    .slide-control {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        width: 10px;
+        text-align: center;
+    }
+    
+    .dot:hover {
+        background-color: var(--red);
+    }
+    
+    .dot.active {
+        background-color: var(--red);
+        height: 60px;
+    }
+    
+    /* fade animation */
+    
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.0s;
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.0s;
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        } to {
+            opacity: 1
+        }
+    }
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        } to {
+            opacity: 1
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .navbar {
+            padding: 10px;
+        }
+        
+        .navbar .menu {
+            display: none;
+        }
+    
+        .navbar .icon {
+            display: block;
+            position: absolute;
+            top: 13px;
+            right: 13px;
+        }
+    
+        .navbar.show {
+            background: var(--black);
+        }
+    
+        .navbar.show .menu {
+            display: block;
+            width: 100%;
+        }
+    
+        .navbar.show .menu a {
+            width: 100%;
+        }
+    
+    
+    }
+    
+    
