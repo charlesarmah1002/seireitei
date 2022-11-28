@@ -3,8 +3,12 @@
     src: url(../fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
 @font-face {
-font-family: secular-one;
+    font-family: secular-one;
     src: url(../fonts/Secular_One/SecularOne-Regular.ttf);
+}
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 * {
     margin: 0;
@@ -377,7 +381,8 @@ footer .container .logo-mini {
     .card-section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        width: 70%;
+        width: 100%;
+        padding: 50px;
     }
     .ep-cards {
         height: 100px;
@@ -396,12 +401,6 @@ footer .container .logo-mini {
     .ep-cards .ep-title{
         margin: 20px auto;
     }
-    .anime-title-index{
-        width: fit-content;
-        text-align: right;
-        padding: 20px;
-        border: 2px solid;
-    }
         @media screen and (max-width: 900px) {
             .card-section{
                 grid-template-columns: 1fr 1fr 1fr;
@@ -419,5 +418,10 @@ footer .container .logo-mini {
 
     .season-title {
         text-align: center;
-        
+        font-size: 3.5rem;
+        font-family: montserrat;
+        text-transform: uppercase;
+    }
+    .caption p{
+        font-size: 1.1rem;
     }
