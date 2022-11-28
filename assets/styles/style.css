@@ -416,3 +416,8 @@ footer .container .logo-mini {
                 grid-template-columns: 1fr 1fr;
             }
         }
+
+    .season-title {
+        text-align: center;
+        
+    }
