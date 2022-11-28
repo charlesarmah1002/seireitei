@@ -27,6 +27,8 @@ body {
     background-position: center;
     background-size: cover;
     width: 100%;
+    max-width: 1400px;
+    min-height: 100vh;
 }
 /* header */
 nav {
@@ -112,7 +114,7 @@ nav {
         opacity: 0;
     }
     .drop-active {
-        top: 107%;
+        top: 103%;
         opacity: 1;
     }
     .menu-item{
@@ -152,62 +154,6 @@ nav {
     .menu {
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
-}
-.headliner {
-    width: 70%;
-    margin: 20px auto;
-}
-.headliner .content {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-    width: 90%;
-    margin: 50px auto;
-}
-.headliner .content .image {
-    width: 60%;
-}
-.headliner .content .image img {
-    width: 100%;
-}
-.headliner .content .sidebar{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    font-size: 1.2rem;
-    width: 30%;
-    border: 1px solid;
-    padding: 20px;
-}
-.headliner .content .sidebar a {
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid;
-    margin: 10px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.headliner .content .sidebar a:hover {
-    scale: 1.05;
-    text-decoration: underline;
-}
-@media screen and (max-width: 900px) {
-    .headliner .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .headliner .content .image {
-        width: 80%;
-    }
-    .headliner .content .sidebar {
-        width: 100%;
-        margin: 20px auto;
     }
 }
 .featured-section {
@@ -357,7 +303,7 @@ footer .container .logo-mini {
     font-family: secular-one;
     font-size: 30px;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: #fdfefe 0.1px ;
+    -webkit-text-stroke: #fdfefe 0.5px;
 }
     @media screen and (max-width: 900px) and (orientation: portrait) {
         footer .container {
@@ -372,4 +318,60 @@ footer .container .logo-mini {
             margin: 5px auto;
             text-align: center;
         }
+    }
+
+
+
+
+    /* styles for the various pages- creating a template and then running with it */
+
+    .page-header {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        width: 90%;
+        margin: 20px auto;
+        height: fit-content;
+    }
+    .page-header .image-container {
+        width: 60%;
+        height: auto;
+    }
+    .page-header .image-container img {
+        width: 100%;
+    }
+    .page-header .caption {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: auto;
+    }
+    @media screen and (max-width: 900px) {
+        .page-header {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .page-header .image-container {
+            width: 75%;
+        }
+        .page-header .caption {
+            width: 75%;
+            margin: 10px auto;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+    
+
+    /* episode cards */
+    /* was considering having pics and stuff on it but having a real change of heart right now */
+    .ep-cards {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
     }

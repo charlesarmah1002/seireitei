@@ -41,6 +41,11 @@
 	font-size: 5rem;
 	font-family: montserrat, sans-serif;
 }
+@media screen and (max-width: 650px) {
+	.caption h2{
+		font-size: 3.5rem;
+	}
+}
 .dot {
 	cursor: pointer;
 	height: 20px;
