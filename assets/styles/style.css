@@ -170,7 +170,7 @@ nav {
     text-decoration: underline;
     text-transform: uppercase;
 }
-.card-section {
+.featured-section .card-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,13 +305,13 @@ footer .container .logo-mini {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: #fdfefe 0.5px;
 }
-    @media screen and (max-width: 900px) and (orientation: portrait) {
-        footer .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
+@media screen and (max-width: 900px) and (orientation: portrait) {
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
         }
         footer .container a {
             display: block;
@@ -320,11 +320,11 @@ footer .container .logo-mini {
         }
     }
 
-
-
-
+    
+    
+    
     /* styles for the various pages- creating a template and then running with it */
-
+    
     .page-header {
         display: flex;
         align-items: stretch;
@@ -355,23 +355,64 @@ footer .container .logo-mini {
             justify-content: center;
         }
         .page-header .image-container {
-            width: 75%;
+            width: 95%;
         }
         .page-header .caption {
-            width: 75%;
+            width: 95%;
             margin: 10px auto;
             padding: 5px;
             text-align: center;
         }
     }
     
-
+    
     /* episode cards */
     /* was considering having pics and stuff on it but having a real change of heart right now */
+    .season {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        margin: 30px auto;
+    }
+    .card-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 70%;
+    }
     .ep-cards {
         height: 100px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
+        text-align: center;
+        border: 1px solid;
+        margin: 5px;
+        transition: all 0.3s ease-in-out;
     }
+    .ep-cards:hover {
+        transform: translateY(-5px);
+    }
+    .ep-cards .ep-title{
+        margin: 20px auto;
+    }
+    .anime-title-index{
+        width: fit-content;
+        text-align: right;
+        padding: 20px;
+        border: 2px solid;
+    }
+        @media screen and (max-width: 900px) {
+            .card-section{
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 100%;
+            }
+            .anime-title-index {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .card-section {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
