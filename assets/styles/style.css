@@ -31,7 +31,7 @@ body {
     background-position: center;
     background-size: cover;
     width: 100%;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     min-height: 100vh;
 }
 /* header */
@@ -166,7 +166,7 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1300px;
+    /* max-width: 1300px; */
     margin: auto;
 }
 .featured-section h3 {
@@ -195,6 +195,20 @@ nav {
     border-radius: 10px;
     width: 50%;
 } */
+::-webkit-scrollbar {
+    width: 1vw;
+    background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb{
+    background: #fdfefe;
+    border-radius: 10px;
+
+}
+::-webkit-scrollbar-track{
+    background: #0d0d0d;
+    border-radius: 10px;
+}
+
 .featured-section h3 {
     text-align: center;
     font-size: 24px;
@@ -241,7 +255,7 @@ nav {
     letter-spacing: 1px;
     width: 200px;
     margin: 10px auto 0 auto;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .featured-section .card-section .card:hover .download-btn {
     animation: bounce infinite 1s alternate cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -394,12 +408,19 @@ footer .container .logo-mini {
         border: 1px solid;
         margin: 5px;
         transition: all 0.3s ease-in-out;
+        cursor: default;
     }
     .ep-cards:hover {
         transform: translateY(-5px);
     }
     .ep-cards .ep-title{
         margin: 20px auto;
+    }
+    .ep-cards .download-btn:hover {
+        background: transparent;
+        border: 1px solid #fdfefe;
+        color: #fdfefe;
+        /* transition: all 0.3s ease-in-out; */
     }
         @media screen and (max-width: 900px) {
             .card-section{
@@ -438,10 +459,11 @@ footer .container .logo-mini {
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        margin-top: 40px;
     }
     .pull-up {
         height: 400px;
-        width: 300px;
+        width: 400px;
         border: 1px solid;
         margin: 20px;
         transition: all 0.4s ease-in-out;
@@ -451,26 +473,34 @@ footer .container .logo-mini {
         font-size: 1.4rem;
         text-decoration: none;
         font-family: montserrat;
+        border-radius: 10px;
+    }
+    @media screen and (max-width: 900px) {
+        .pull-up {
+            width: 300px;
+            height: 300px;
+            margin: 15px;
+        }
     }
     .pull-up:hover {
         transform: translateY(-10px);
     }
     .mha-pull{
-        background: url(../../media/boku-no\ hero\ academia.jfif) #12131371;
+        background: url(../../media/deku\ -\ square.jpg) #12131371;
         background-blend-mode: multiply;
         background-size: cover;
         background-position: center;
         position: relative;
     }
     .bleach-pull {
-        background: url(../../media/Bleach-TYBW-1024x576.jpg) #12131371;
+        background: url(../../media/Ichigo\ Kurosaki\ -\ square.jpg) #12131371;
         background-blend-mode: multiply;
         background-size: cover;
         background-position: right;
         position: relative;
     }
     .spy-x-family-pull {
-        background: url(../../media/spy-x-family.jfif.png) #12131371;
+        background: url(../../media/anya-square.jpg) #12131371;
         background-blend-mode: multiply;
         background-size: cover;
         background-position: center;
