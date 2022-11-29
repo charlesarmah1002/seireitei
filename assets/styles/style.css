@@ -425,3 +425,54 @@ footer .container .logo-mini {
     .caption p{
         font-size: 1.1rem;
     }
+
+
+
+
+
+
+
+    /* == this is for pull-up.html == */
+    section.pull-ups {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .pull-up {
+        height: 400px;
+        width: 300px;
+        border: 1px solid;
+        margin: 20px;
+        transition: all 0.4s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        text-decoration: none;
+        font-family: montserrat;
+    }
+    .pull-up:hover {
+        transform: translateY(-10px);
+    }
+    .mha-pull{
+        background: url(../../media/boku-no\ hero\ academia.jfif) #12131371;
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .bleach-pull {
+        background: url(../../media/Bleach-TYBW-1024x576.jpg) #12131371;
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-position: right;
+        position: relative;
+    }
+    .spy-x-family-pull {
+        background: url(../../media/spy-x-family.jfif.png) #12131371;
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
