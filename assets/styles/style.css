@@ -69,7 +69,7 @@ nav {
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-family: secular-one;
+    font-family: secular-one, sans-serif;
     -webkit-text-stroke: #fdfefe 0.7px;
     padding: 0 10px;
     border-radius: 10px;
@@ -318,7 +318,7 @@ footer .container {
     text-transform: uppercase;
 }
 footer .container .logo-mini {
-    font-family: secular-one;
+    font-family: secular-one, sans-serif;
     font-size: 30px;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: #fdfefe 0.5px;
@@ -390,13 +390,12 @@ footer .container .logo-mini {
         display: flex;
         align-items: stretch;
         justify-content: space-evenly;
-        margin: 30px auto;
     }
     .card-section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         width: 100%;
-        padding: 50px;
+        padding: 0 50px;
     }
     .ep-cards {
         height: 100px;
@@ -440,8 +439,9 @@ footer .container .logo-mini {
     .season-title {
         text-align: center;
         font-size: 3.5rem;
-        font-family: montserrat;
+        font-family: montserrat, sans-serif;
         text-transform: uppercase;
+        margin-top: 20px;
     }
     .caption p{
         font-size: 1.1rem;
@@ -472,7 +472,7 @@ footer .container .logo-mini {
         justify-content: center;
         font-size: 1.4rem;
         text-decoration: none;
-        font-family: montserrat;
+        font-family: montserrat, sans-serif;
         border-radius: 10px;
     }
     @media screen and (max-width: 900px) {
@@ -507,7 +507,7 @@ footer .container .logo-mini {
         position: relative;
     }
     .one-punch-man-pull {
-        background: url(../../media/anya-square.jpg) #12131371;
+        background: url(../../media/saitama-opm.jpg) #12131371;
         background-blend-mode: multiply;
         background-size: cover;
         background-position: center;
