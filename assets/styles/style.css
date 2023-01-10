@@ -33,6 +33,7 @@ body {
     width: 100%;
     /* max-width: 1400px; */
     min-height: 100vh;
+    margin: auto;
 }
 /* header */
 nav {
@@ -71,8 +72,21 @@ nav {
     font-weight: 700;
     font-family: secular-one, sans-serif;
     -webkit-text-stroke: #fdfefe 0.7px;
+    text-decoration: none;
     padding: 0 10px;
     border-radius: 10px;
+    background: linear-gradient(to right, #fdfefe 50%, transparent 0%);
+    background-position: right;
+    background-size: 500%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    transition: all 0.5s ease-in-out;
+}
+.logo:hover {
+    background-position: left;
+    background-size: 300%;
+    -webkit-text-stroke: #0d0d0d 0.7px;
+    /* background: linear-gradient(to right, #fdfefe 50%, transparent 0%); */
 }
 @media screen and (max-width: 900px) and (orientation: portrait) {
     .logo {
@@ -95,12 +109,20 @@ nav {
 .menu-item a {
     text-decoration: none;
     color: inherit;
+    position: relative;
 }
-.menu-item:hover{
-    color: red;
-    text-shadow: 0 0 5px red;
-    scale: 1.1;
-    font-weight: 600;
+.menu-item a::after {
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    content: '';
+    height: 2px;
+    background: #fdfefe;
+    transition: 0.5s;
+}
+.menu-item a:hover::after{
+    width: 100%;
 }
 @media screen and (max-width: 900px) {
     .navigation-container {
@@ -512,4 +534,35 @@ footer .container .logo-mini {
         background-size: cover;
         background-position: center;
         position: relative;
+    }
+
+    /* for the season index */
+    .season-index {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 20px auto;
+        flex-wrap: wrap;
+    }
+    .season-index a {
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        transition: 0.5s;
+        margin: 20px;
+    }
+    .season-index a::after {
+        position: absolute;
+        width: 0%;
+        left: 0;
+        bottom: -5px;
+        content: '';
+        height: 2px;
+        background: #fdfefe;
+        transition: 0.5s;
+    }
+    .season-index a:hover::after {
+        width: 100%;
     }
