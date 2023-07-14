@@ -1,0 +1,184 @@
+@font-face {
+    font-family: quicksand;
+    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: secular-one;
+    src: url(../assets/fonts/Secular_One/SecularOne-Regular.ttf);
+}
+@font-face {
+    font-family: montserrat;
+    src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: quicksand, sans-serif;
+    color: #fdfefe;
+    scroll-behavior: smooth;
+    scroll-padding: 5rem;
+}
+.card {
+    scroll-padding: 20rem;
+}
+p {
+    font-size: 1.6rem;
+}
+body {
+    background: radial-gradient(at top left, #e90d0d 0%, #121313 100%), url(../../media/akatsuki-background.jpg);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    /* max-width: 1400px; */
+    min-height: 100vh;
+    margin: auto;
+}
+/* header */
+nav {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #fdfefe;
+    border-bottom: #fdfefe81 3px solid;
+    background: #00000041;
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    nav {
+        padding: 30px 0;
+    }
+}
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 50px;
+}
+.logo {
+    background-size: 70%;
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: secular-one, sans-serif;
+    -webkit-text-stroke: #fdfefe 0.7px;
+    text-decoration: none;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #fdfefe 50%, transparent 0%);
+    background-position: right;
+    background-size: 500%;
+    /* background-clip: text; */
+    background-clip: text;
+    transition: all 0.5s ease-in-out;
+}
+.logo:hover {
+    background-position: left;
+    background-size: 300%;
+    -webkit-text-stroke: #0d0d0d 0.7px;
+    /* background: linear-gradient(to right, #fdfefe 50%, transparent 0%); */
+}
+@media screen and (max-width: 900px) and (orientation: portrait) {
+    .logo {
+        font-size: 30px;
+    }
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+.menu-item {
+    margin-left: 15px;
+    list-style: none;
+    transition: all 0.4s ease-in-out;
+    font-size: 1.2rem;
+}
+.menu-item a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+.menu-item a::after {
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    content: '';
+    height: 2px;
+    background: #fdfefe;
+    transition: 0.5s;
+}
+.menu-item a:hover::after{
+    width: 100%;
+}
+@media screen and (max-width: 900px) {
+    .navigation-container {
+        padding: 0 10px;
+    }
+    .menu {
+        display: grid;
+        position: absolute;
+        top: -1000px;
+        left: 0;
+        width: 100%;
+        background: #0d0d0d;
+        padding: 30px 0;
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+    }
+    .drop-active {
+        top: 103%;
+        opacity: 1;
+    }
+    .menu-item{
+        margin: 20px auto;
+    }
+    .menu-item:hover{
+        color: red;
+        font-weight: 600;
+    }
+    .menu-toggle {
+        width: fit-content;
+        height: fit-content;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+    }
+    .bar {
+        width: 35px;
+        height: 3px;
+        background: #fdfefe;
+        border-radius: 10px;
+        display: block;
+        margin: 6px auto;
+        transition: all ease-in-out 0.4s;
+    }
+    .toggle-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .toggle-active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+    .toggle-active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+@media screen and (max-width: 900px) and (orientation: landscape){
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
